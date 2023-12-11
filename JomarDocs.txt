@@ -1,0 +1,54 @@
+Game Components:
+Tetris Class:
+
+Responsibility: Manages the game state and logic.
+Key Features:
+Handles user input for movement, rotation, and other actions.
+Uses a game loop to update the game state and render the display continuously.
+Controls the current and next pieces, checking for collisions, clearing lines, and updating the score.
+Manages game over conditions and displays relevant information.
+BoardPanel Class:
+
+Responsibility: Renders the game board.
+Key Features:
+Extends JPanel to provide a visual representation of the game board.
+Uses colors and shapes defined in TileType to represent different types of tiles.
+Clears lines when they are completed, updating the display.
+TileType Enum:
+
+Responsibility: Describes the properties of various Tetris pieces.
+Key Features:
+Enumerates different Tetris piece types, each with a unique color, shape, and rotation.
+Defines methods to get base, light, and dark colors, dimensions, spawn column, spawn row, and more.
+Specifies the shape of each piece using a 2D boolean array.
+Game Flow:
+Initialization:
+
+The game initializes with an empty board, a random initial piece, and the next piece to be spawned.
+User Input:
+
+Players can use keyboard input (arrow keys and other specified keys) to control the falling Tetris piece.
+Piece Movement:
+
+The game checks if the current piece can move down and updates its position accordingly.
+Players can move the piece left or right, rotate it, or make it drop faster.
+Collision Handling:
+
+The game checks for collisions with the walls, other pieces, or the bottom of the board.
+If a collision occurs, the piece is added to the board, and a new piece is spawned.
+Line Clearing:
+
+When a line is completely filled, it is cleared, and the player's score is updated.
+Game Over:
+
+The game ends if a new piece cannot be spawned without colliding with existing pieces.
+Display:
+
+The game continuously updates and renders the display, showing the current board, score, and next piece.
+Pause and Reset:
+
+Players can pause and restart the game as needed.
+Additional Features:
+Scoring System: Scores are updated based on the number of lines cleared.
+Leveling: The game has a level system that may increase as players clear more lines.
+Speed Increase: The game speed may increase as the level progresses.

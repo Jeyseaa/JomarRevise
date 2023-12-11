@@ -1,0 +1,29 @@
+Eto yung code naten sa scoring 
+
+// Inside the Tetris class fields
+private int score;
+
+// Inside the updateGame method
+if (cleared > 0) {
+    score += 50 << cleared;
+}
+
+
+
+
+
+
+
+
+
+When lines are cleared (cleared > 0), you add points to the score.
+The score calculation is based on bit-shifting. It adds 50 times 2 to the power of cleared. The expression 50 << cleared is a bitwise left shift, effectively multiplying 50 by 2 to the power of cleared.
+Here's a breakdown of how the scoring works:
+
+Clearing 1 line gives 50 << 1 = 100 points.
+Clearing 2 lines gives 50 << 2 = 200 points.
+Clearing 3 lines gives 50 << 3 = 400 points.
+And so on.
+If you clear multiple lines simultaneously, the score is increased exponentially based on the number of lines cleared.
+
+For example, clearing 2 lines in a single move would give you 50 << 2 = 200 points, while clearing 3 lines in a single move would give you 50 << 3 = 400 points. The more lines you clear at once, the higher the score multiplier.

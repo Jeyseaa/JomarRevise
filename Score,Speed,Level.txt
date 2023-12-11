@@ -1,0 +1,14 @@
+Scoring:
+
+Score is increased when lines are cleared. The formula for scoring is: score += 50 << cleared;, where cleared is the number of lines cleared at once.
+The more lines you clear simultaneously, the higher the score.
+Speed:
+
+The game has a variable called gameSpeed, representing the speed at which the Tetris pieces fall. Initially set to 1.0.
+The speed can be adjusted as the player progresses through levels, providing a dynamic and potentially more challenging experience.
+Level:
+
+The game has a variable called level representing the player's current level.
+The initial level is set to 1.
+The level may be increased based on certain conditions, such as the number of lines cleared or elapsed time.
+The level can affect the game speed (gameSpeed), making the game progressively faster as the player advances.
